@@ -65,96 +65,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-.nav-link:is(:hover, :focus),
-.address-link:is(:hover, :focus),
-.work-subtitle:is(:hover, :focus),
-.work-text:is(:hover, :focus) {
-  color: var(--color-active);
-}
-
-.address-link,
-.work-text {
-  color: var(--color-text-dark);
-}
-
-.hero,
-.footer {
-  background-color: var(--color-dark);
-}
-
-.nav-link,
-.address-link,
-.skills-text,
-.team-text,
-.footer-text,
-.work-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-.address-link,
-.skills-text,
-.team-text,
-.footer-text,
-.work-text {
-  font-weight: var(--font-regular);
-}
-
-.hero-title {
-  font-size: var(--font-size-h1);
-  line-height: 1.07;
-}
-
-.hero-title,
-.doing-title,
-.team-title {
-  font-weight: var(--font-bold);
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-
-.doing-title,
-.team-title {
-  font-size: var(--font-size-h2);
-  line-height: 1.11;
-  color: var(--color-dark);
-  text-transform: capitalize;
-}
-
-.team-subtitle,
-.team-text {
-  text-align: center;
-}
-
-.hero-btn,
-.work-btn {
-  font-weight: var(--font-medium);
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-}
-
-.hero-btn,
-.hero-title,
-.work-btn:is(:hover, :focus) {
-  color: var(--color-light);
-}
-
-.hero-btn:is(:hover, :focus),
-.work-btn:is(:hover, :focus) {
-  background-color: var(--color-active);
-}
-
-.skills-subtitle,
-.team-subtitle,
-.work-subtitle {
-  margin-bottom: 8px;
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-medium);
-  line-height: 1.2;
-  color: var(--color-dark);
-  letter-spacing: 0.02em;
-}
-
 /***************** HOME ******************/
 
 /* =============== HEADER =============== */
@@ -187,6 +97,12 @@ body {
 .nav-link {
   font-weight: var(--font-medium);
   color: var(--color-dark);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.nav-link:is(:hover, :focus) {
+  color: var(--color-active);
 }
 
 .address {
@@ -194,15 +110,33 @@ body {
   gap: 40px;
 }
 
+.address-link {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: var(--font-regular);
+  color: var(--color-text-dark);
+}
+
+.address-link:is(:hover, :focus) {
+  color: var(--color-active);
+}
+
 /* =============== HERO =============== */
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
+  background-color: var(--color-dark);
 }
 
 .hero-title {
   width: 500px;
   margin: 0 auto;
+  color: var(--color-light);
+  font-size: var(--font-size-h1);
+  line-height: 1.07;
+  font-weight: var(--font-bold);
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .hero-btn {
@@ -212,6 +146,14 @@ body {
   background-color: var(--color-accent);
   border-radius: 4px;
   box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-light);
+}
+
+.hero-btn:is(:hover, :focus) {
+  background-color: var(--color-active);
 }
 
 /* =============== SKILLS =============== */
@@ -225,8 +167,23 @@ body {
   gap: 24px;
 }
 
+.skills-subtitle {
+  margin-bottom: 8px;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-medium);
+  line-height: 1.2;
+  color: var(--color-dark);
+  letter-spacing: 0.02em;
+}
+
 .skills-item {
   width: 264px;
+}
+
+.skills-text {
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /* =============== DOING =============== */
@@ -236,6 +193,13 @@ body {
 
 .doing-title {
   margin-bottom: 72px;
+  font-weight: var(--font-bold);
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-size: var(--font-size-h2);
+  line-height: 1.11;
+  color: var(--color-dark);
+  text-transform: capitalize;
 }
 
 .doing-list {
@@ -252,11 +216,32 @@ body {
 
 .team-title {
   margin-bottom: 72px;
+  font-weight: var(--font-bold);
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-size: var(--font-size-h2);
+  line-height: 1.11;
+  color: var(--color-dark);
+  text-transform: capitalize;
 }
 
 .team-list {
   display: flex;
   gap: 24px;
+}
+
+.team-content {
+  padding: 32px 16px;
+}
+
+.team-subtitle {
+  margin-bottom: 8px;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-medium);
+  line-height: 1.2;
+  color: var(--color-dark);
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .team-item {
@@ -269,14 +254,18 @@ body {
     0 2px 1px rgb(46 47 66 / 8%);
 }
 
-.team-content {
-  padding: 32px 16px;
+.team-text {
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 /* =============== FOOTER =============== */
 .footer {
   padding-top: 100px;
   padding-bottom: 100px;
+  background-color: var(--color-dark);
 }
 
 .footer-content {
@@ -290,6 +279,9 @@ body {
 .footer-text {
   margin-top: 16px;
   color: var(--color-text-light);
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /***************** PORTFOLIO ******************/
@@ -306,6 +298,9 @@ body {
 }
 
 .work-btn {
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   padding: 12px 24px;
   color: var(--color-accent);
   background-color: var(--color-alt);
@@ -314,6 +309,8 @@ body {
 }
 
 .work-btn:is(:hover, :focus) {
+  color: var(--color-light);
+  background-color: var(--color-active);
   border: 1px solid var(--color-active);
   box-shadow:
     0 3px 1px rgb(0 0 0 / 10%),
@@ -333,16 +330,35 @@ body {
 }
 
 .work-link img {
-  background:
-    linear-gradient(
-      0deg,
-      rgb(77 90 229 / 10%),
-      rgb(77 90 229 / 10%)
-    );
+  background: linear-gradient(0deg, rgb(77 90 229 / 10%), rgb(77 90 229 / 10%));
 }
 
 .work-content {
   padding: 32px 16px;
   border: 1px solid var(--color-text-light);
   border-top: 0;
+}
+
+.work-subtitle {
+  margin-bottom: 8px;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-medium);
+  line-height: 1.2;
+  color: var(--color-dark);
+  letter-spacing: 0.02em;
+}
+
+.work-subtitle:is(:hover, :focus) {
+  color: var(--color-active);
+}
+
+.work-text {
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-text-dark);
+}
+
+.work-text:is(:hover, :focus) {
+  color: var(--color-active);
 }

@@ -29,17 +29,17 @@ button {
   cursor: pointer;
 }
 
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
 :focus,
 :active,
 a:focus,
 a:active {
   outline: none;
-}
-
-a,
-a:visited,
-a:hover {
-  text-decoration: none;
 }
 
 address {
