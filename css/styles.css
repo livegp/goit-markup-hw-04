@@ -7,14 +7,6 @@
   --color-active: #404bbf;
   --color-text-light: #e7e9fc;
   --color-text-dark: #434455;
-
-  /* --color-text-modal: #8e8f99; */
-
-  /* --color-bgd-hero: rgba(46, 47, 66, 0.7); */
-
-  /* --color-bgd-modal: rgba(46, 47, 66, 0.4); */
-
-  /* --color-bgd-valid: #31d0aa; */
   --font-heavy: 900;
   --font-black: 800;
   --font-bold: 700;
@@ -26,58 +18,66 @@
   --font-size-big: 18px;
   --font-size-normal: 16px;
   --font-size-small: 12px;
+
+  /* --color-text-modal: #8e8f99; */
+
+  /* --color-bgd-hero: rgba(46, 47, 66, 0.7); */
+
+  /* --color-bgd-modal: rgba(46, 47, 66, 0.4); */
+
+  /* --color-bgd-valid: #31d0aa; */
 }
 
 body {
+  background-color: var(--color-light);
   font-family: var(--font);
   font-size: var(--font-size-normal);
   color: var(--color-text-dark);
-  background-color: var(--color-light);
 }
 
 .container {
-  width: 100%;
-  max-width: 1158px;
-  padding: 0 15px;
   margin: 0 auto;
+  max-width: 1158px;
+  width: 100%;
+  padding: 0 15px;
 }
 
 .hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
+  border: 0;
   margin: -1px;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
-  white-space: nowrap;
-  border: 0;
 }
 
 .logo {
-  font-family: Raleway, sans-serif;
-  font-size: var(--font-size-big);
-  font-weight: var(--font-black);
-  line-height: 1.33;
-  color: var(--color-accent);
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  font-family: Raleway, sans-serif;
+  font-size: var(--font-size-big);
+  line-height: 1.33;
+  font-weight: var(--font-black);
+  color: var(--color-accent);
 }
 
 /***************** HOME ******************/
 
 /* =============== HEADER =============== */
 .header {
+  border-bottom: 1px solid var(--color-text-light);
   padding-top: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid var(--color-text-light);
 }
 
 .header > div {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo-header {
@@ -95,10 +95,10 @@ body {
 }
 
 .nav-link {
+  letter-spacing: 0.02em;
+  line-height: 1.5;
   font-weight: var(--font-medium);
   color: var(--color-dark);
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 
 .nav-link:is(:hover, :focus) {
@@ -111,8 +111,8 @@ body {
 }
 
 .address-link {
-  line-height: 1.5;
   letter-spacing: 0.02em;
+  line-height: 1.5;
   font-weight: var(--font-regular);
   color: var(--color-text-dark);
 }
@@ -123,33 +123,33 @@ body {
 
 /* =============== HERO =============== */
 .hero {
+  background-color: var(--color-dark);
   padding-top: 188px;
   padding-bottom: 188px;
-  background-color: var(--color-dark);
 }
 
 .hero-title {
-  width: 500px;
   margin: 0 auto;
-  color: var(--color-light);
+  width: 500px;
+  letter-spacing: 0.02em;
   font-size: var(--font-size-h1);
   line-height: 1.07;
   font-weight: var(--font-bold);
+  color: var(--color-light);
   text-align: center;
-  letter-spacing: 0.02em;
 }
 
 .hero-btn {
   display: block;
-  padding: 16px 32px;
+  border-radius: 4px;
   margin: 48px auto 0;
   background-color: var(--color-accent);
-  border-radius: 4px;
-  box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
-  font-weight: var(--font-medium);
-  line-height: 1.5;
+  padding: 16px 32px;
   letter-spacing: 0.04em;
+  line-height: 1.5;
+  font-weight: var(--font-medium);
   color: var(--color-light);
+  box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
 }
 
 .hero-btn:is(:hover, :focus) {
@@ -169,11 +169,11 @@ body {
 
 .skills-subtitle {
   margin-bottom: 8px;
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-medium);
-  line-height: 1.2;
-  color: var(--color-dark);
   letter-spacing: 0.02em;
+  font-size: var(--font-size-h3);
+  line-height: 1.2;
+  font-weight: var(--font-medium);
+  color: var(--color-dark);
 }
 
 .skills-item {
@@ -181,9 +181,9 @@ body {
 }
 
 .skills-text {
-  font-weight: var(--font-regular);
-  line-height: 1.5;
   letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-weight: var(--font-regular);
 }
 
 /* =============== DOING =============== */
@@ -193,13 +193,13 @@ body {
 
 .doing-title {
   margin-bottom: 72px;
-  font-weight: var(--font-bold);
-  text-align: center;
+  text-transform: capitalize;
   letter-spacing: 0.02em;
   font-size: var(--font-size-h2);
   line-height: 1.11;
+  font-weight: var(--font-bold);
   color: var(--color-dark);
-  text-transform: capitalize;
+  text-align: center;
 }
 
 .doing-list {
@@ -209,20 +209,20 @@ body {
 
 /* =============== TEAM =============== */
 .team {
+  background-color: var(--color-alt);
   padding-top: 120px;
   padding-bottom: 120px;
-  background-color: var(--color-alt);
 }
 
 .team-title {
   margin-bottom: 72px;
-  font-weight: var(--font-bold);
-  text-align: center;
+  text-transform: capitalize;
   letter-spacing: 0.02em;
   font-size: var(--font-size-h2);
   line-height: 1.11;
+  font-weight: var(--font-bold);
   color: var(--color-dark);
-  text-transform: capitalize;
+  text-align: center;
 }
 
 .team-list {
@@ -236,18 +236,18 @@ body {
 
 .team-subtitle {
   margin-bottom: 8px;
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-medium);
-  line-height: 1.2;
-  color: var(--color-dark);
   letter-spacing: 0.02em;
+  font-size: var(--font-size-h3);
+  line-height: 1.2;
+  font-weight: var(--font-medium);
+  color: var(--color-dark);
   text-align: center;
 }
 
 .team-item {
-  width: 264px;
-  background-color: var(--color-light);
   border-radius: 0 0 4px 4px;
+  background-color: var(--color-light);
+  width: 264px;
   box-shadow:
     0 1px 6px rgb(46 47 66 / 8%),
     0 1px 1px rgb(46 47 66 / 16%),
@@ -255,17 +255,17 @@ body {
 }
 
 .team-text {
-  font-weight: var(--font-regular);
-  line-height: 1.5;
   letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-weight: var(--font-regular);
   text-align: center;
 }
 
 /* =============== FOOTER =============== */
 .footer {
+  background-color: var(--color-dark);
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: var(--color-dark);
 }
 
 .footer-content {
@@ -278,10 +278,10 @@ body {
 
 .footer-text {
   margin-top: 16px;
-  color: var(--color-text-light);
-  font-weight: var(--font-regular);
-  line-height: 1.5;
   letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-weight: var(--font-regular);
+  color: var(--color-text-light);
 }
 
 /***************** PORTFOLIO ******************/
@@ -292,26 +292,26 @@ body {
 
 .work-list-btn {
   display: flex;
-  gap: 24px;
   justify-content: center;
   margin-bottom: 72px;
+  gap: 24px;
 }
 
 .work-btn {
-  font-weight: var(--font-medium);
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  padding: 12px 24px;
-  color: var(--color-accent);
-  background-color: var(--color-alt);
   border: 1px solid var(--color-text-light);
   border-radius: 4px;
+  background-color: var(--color-alt);
+  padding: 12px 24px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  font-weight: var(--font-medium);
+  color: var(--color-accent);
 }
 
 .work-btn:is(:hover, :focus) {
-  color: var(--color-light);
-  background-color: var(--color-active);
   border: 1px solid var(--color-active);
+  background-color: var(--color-active);
+  color: var(--color-light);
   box-shadow:
     0 3px 1px rgb(0 0 0 / 10%),
     0 2px 1px rgb(0 0 0 / 8%),
@@ -321,8 +321,8 @@ body {
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px 24px;
   margin-bottom: 24px;
+  gap: 48px 24px;
 }
 
 .work-item {
@@ -334,18 +334,18 @@ body {
 }
 
 .work-content {
-  padding: 32px 16px;
   border: 1px solid var(--color-text-light);
   border-top: 0;
+  padding: 32px 16px;
 }
 
 .work-subtitle {
   margin-bottom: 8px;
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-medium);
-  line-height: 1.2;
-  color: var(--color-dark);
   letter-spacing: 0.02em;
+  font-size: var(--font-size-h3);
+  line-height: 1.2;
+  font-weight: var(--font-medium);
+  color: var(--color-dark);
 }
 
 .work-subtitle:is(:hover, :focus) {
@@ -353,9 +353,9 @@ body {
 }
 
 .work-text {
-  font-weight: var(--font-regular);
-  line-height: 1.5;
   letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-weight: var(--font-regular);
   color: var(--color-text-dark);
 }
 
