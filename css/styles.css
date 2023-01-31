@@ -335,7 +335,7 @@ body {
 
 .work-content {
   border: 1px solid var(--color-text-light);
-  border-top: 0;
+  border-top: none;
   padding: 32px 16px;
 }
 
