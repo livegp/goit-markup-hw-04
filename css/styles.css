@@ -70,14 +70,17 @@ body {
 /* =============== HEADER =============== */
 .header {
   border-bottom: 1px solid var(--color-text-light);
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
-.header > div {
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-section .logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .logo-header {
@@ -86,6 +89,7 @@ body {
 
 .nav-section {
   display: flex;
+  align-items: center;
   gap: 76px;
 }
 
@@ -95,6 +99,8 @@ body {
 }
 
 .nav-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
   letter-spacing: 0.02em;
   line-height: 1.5;
   font-weight: var(--font-medium);
@@ -111,6 +117,8 @@ body {
 }
 
 .address-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
   letter-spacing: 0.02em;
   line-height: 1.5;
   font-weight: var(--font-regular);
