@@ -29,40 +29,40 @@
 }
 
 body {
-  background-color: var(--color-light);
-  font-family: var(--font);
-  font-size: var(--font-size-normal);
   color: var(--color-text-dark);
+  font-size: var(--font-size-normal);
+  font-family: var(--font);
+  background-color: var(--color-light);
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1158px;
   width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
   padding: 0 15px;
 }
 
 .hidden {
   position: absolute;
-  border: 0;
-  margin: -1px;
-  height: 1px;
   width: 1px;
-  overflow: hidden;
+  height: 1px;
+  margin: -1px;
   padding: 0;
+  overflow: hidden;
   white-space: nowrap;
+  border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
 
 .logo {
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  font-family: Raleway, sans-serif;
-  font-size: var(--font-size-big);
-  line-height: 1.33;
-  font-weight: var(--font-black);
   color: var(--color-accent);
+  font-weight: var(--font-black);
+  font-size: var(--font-size-big);
+  font-family: Raleway, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /***************** HOME ******************/
@@ -74,8 +74,8 @@ body {
 
 .header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav-section .logo {
@@ -89,8 +89,8 @@ body {
 
 .nav-section {
   display: flex;
-  align-items: center;
   gap: 76px;
+  align-items: center;
 }
 
 .nav {
@@ -101,12 +101,13 @@ body {
 .nav-link {
   padding-top: 24px;
   padding-bottom: 24px;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  font-weight: var(--font-medium);
   color: var(--color-dark);
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
+.activ,
 .nav-link:is(:hover, :focus) {
   color: var(--color-active);
 }
@@ -119,44 +120,49 @@ body {
 .address-link {
   padding-top: 24px;
   padding-bottom: 24px;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  font-weight: var(--font-regular);
   color: var(--color-text-dark);
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .address-link:is(:hover, :focus) {
   color: var(--color-active);
 }
 
+.activ {
+  color: var(--color-active);
+  border-bottom: 4px solid var(--color-active);
+}
+
 /* =============== HERO =============== */
 .hero {
-  background-color: var(--color-dark);
   padding-top: 188px;
   padding-bottom: 188px;
+  background-color: var(--color-dark);
 }
 
 .hero-title {
+  max-width: 500px;
   margin: 0 auto;
-  width: 500px;
-  letter-spacing: 0.02em;
+  color: var(--color-light);
+  font-weight: var(--font-bold);
   font-size: var(--font-size-h1);
   line-height: 1.07;
-  font-weight: var(--font-bold);
-  color: var(--color-light);
+  letter-spacing: 0.02em;
   text-align: center;
 }
 
 .hero-btn {
   display: block;
-  border-radius: 4px;
   margin: 48px auto 0;
-  background-color: var(--color-accent);
   padding: 16px 32px;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-  font-weight: var(--font-medium);
   color: var(--color-light);
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background-color: var(--color-accent);
+  border-radius: 4px;
   box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
 }
 
@@ -177,11 +183,11 @@ body {
 
 .skills-subtitle {
   margin-bottom: 8px;
-  letter-spacing: 0.02em;
+  color: var(--color-dark);
+  font-weight: var(--font-medium);
   font-size: var(--font-size-h3);
   line-height: 1.2;
-  font-weight: var(--font-medium);
-  color: var(--color-dark);
+  letter-spacing: 0.02em;
 }
 
 .skills-item {
@@ -189,9 +195,9 @@ body {
 }
 
 .skills-text {
-  letter-spacing: 0.02em;
-  line-height: 1.5;
   font-weight: var(--font-regular);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /* =============== DOING =============== */
@@ -201,13 +207,13 @@ body {
 
 .doing-title {
   margin-bottom: 72px;
-  text-transform: capitalize;
-  letter-spacing: 0.02em;
+  color: var(--color-dark);
+  font-weight: var(--font-bold);
   font-size: var(--font-size-h2);
   line-height: 1.11;
-  font-weight: var(--font-bold);
-  color: var(--color-dark);
+  letter-spacing: 0.02em;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .doing-list {
@@ -217,20 +223,20 @@ body {
 
 /* =============== TEAM =============== */
 .team {
-  background-color: var(--color-alt);
   padding-top: 120px;
   padding-bottom: 120px;
+  background-color: var(--color-alt);
 }
 
 .team-title {
   margin-bottom: 72px;
-  text-transform: capitalize;
-  letter-spacing: 0.02em;
+  color: var(--color-dark);
+  font-weight: var(--font-bold);
   font-size: var(--font-size-h2);
   line-height: 1.11;
-  font-weight: var(--font-bold);
-  color: var(--color-dark);
+  letter-spacing: 0.02em;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .team-list {
@@ -244,18 +250,18 @@ body {
 
 .team-subtitle {
   margin-bottom: 8px;
-  letter-spacing: 0.02em;
+  color: var(--color-dark);
+  font-weight: var(--font-medium);
   font-size: var(--font-size-h3);
   line-height: 1.2;
-  font-weight: var(--font-medium);
-  color: var(--color-dark);
+  letter-spacing: 0.02em;
   text-align: center;
 }
 
 .team-item {
   flex-basis: calc((100% - 48px) / 4);
-  border-radius: 0 0 4px 4px;
   background-color: var(--color-light);
+  border-radius: 0 0 4px 4px;
   box-shadow:
     0 1px 6px rgb(46 47 66 / 8%),
     0 1px 1px rgb(46 47 66 / 16%),
@@ -263,21 +269,21 @@ body {
 }
 
 .team-text {
-  letter-spacing: 0.02em;
-  line-height: 1.5;
   font-weight: var(--font-regular);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   text-align: center;
 }
 
 /* =============== FOOTER =============== */
 .footer {
-  background-color: var(--color-dark);
   padding-top: 100px;
   padding-bottom: 100px;
+  background-color: var(--color-dark);
 }
 
 .footer-content {
-  width: 264px;
+  max-width: 264px;
 }
 
 .logo-footer {
@@ -286,10 +292,10 @@ body {
 
 .footer-text {
   margin-top: 16px;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  font-weight: var(--font-regular);
   color: var(--color-text-light);
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /***************** PORTFOLIO ******************/
@@ -300,26 +306,26 @@ body {
 
 .work-list-btn {
   display: flex;
+  gap: 24px;
   justify-content: center;
   margin-bottom: 72px;
-  gap: 24px;
 }
 
 .work-btn {
+  padding: 12px 24px;
+  color: var(--color-accent);
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background-color: var(--color-alt);
   border: 1px solid var(--color-text-light);
   border-radius: 4px;
-  background-color: var(--color-alt);
-  padding: 12px 24px;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-  font-weight: var(--font-medium);
-  color: var(--color-accent);
 }
 
 .work-btn:is(:hover, :focus) {
-  border: 1px solid var(--color-active);
-  background-color: var(--color-active);
   color: var(--color-light);
+  background-color: var(--color-active);
+  border: 1px solid var(--color-active);
   box-shadow:
     0 3px 1px rgb(0 0 0 / 10%),
     0 2px 1px rgb(0 0 0 / 8%),
@@ -329,8 +335,8 @@ body {
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 24px;
   gap: 48px 24px;
+  margin-bottom: 24px;
 }
 
 .work-item {
@@ -342,18 +348,18 @@ body {
 }
 
 .work-content {
+  padding: 32px 16px;
   border: 1px solid var(--color-text-light);
   border-top: none;
-  padding: 32px 16px;
 }
 
 .work-subtitle {
   margin-bottom: 8px;
-  letter-spacing: 0.02em;
+  color: var(--color-dark);
+  font-weight: var(--font-medium);
   font-size: var(--font-size-h3);
   line-height: 1.2;
-  font-weight: var(--font-medium);
-  color: var(--color-dark);
+  letter-spacing: 0.02em;
 }
 
 .work-subtitle:is(:hover, :focus) {
@@ -361,10 +367,10 @@ body {
 }
 
 .work-text {
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  font-weight: var(--font-regular);
   color: var(--color-text-dark);
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .work-text:is(:hover, :focus) {
