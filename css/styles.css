@@ -18,10 +18,8 @@
   --font-size-big: 18px;
   --font-size-normal: 16px;
   --font-size-small: 12px;
-
-  /* --color-text-modal: #8e8f99; */
-
-  /* --color-bgd-hero: rgba(46, 47, 66, 0.7); */
+  --color-bgd-hero: rgb(46 47 66 / 70%);
+  --color-modal: #8e8f99;
 
   /* --color-bgd-modal: rgba(46, 47, 66, 0.4); */
 
@@ -70,6 +68,10 @@ body {
 /* =============== HEADER =============== */
 .header {
   border-bottom: 1px solid var(--color-text-light);
+  box-shadow:
+    0 2px 1px rgb(46 47 66 / 8%),
+    0 1px 1px rgb(46 47 66 / 16%),
+    0 1px 6px rgb(46 47 66 / 8%);
 }
 
 .header .container {
@@ -107,6 +109,7 @@ body {
   color: var(--color-dark);
 }
 
+.activ,
 .nav-link:is(:hover, :focus) {
   color: var(--color-active);
 }
@@ -129,16 +132,29 @@ body {
   color: var(--color-active);
 }
 
+.activ {
+  border-bottom: 4px solid var(--color-active);
+  color: var(--color-active);
+}
+
 /* =============== HERO =============== */
 .hero {
   background-color: var(--color-dark);
+  background-image:
+    linear-gradient(
+      var(--color-bgd-hero),
+      var(--color-bgd-hero)
+    ),
+    url("../images/home/hero/people-office.jpg");
+  background-position: 50% 0;
+  background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
 }
 
 .hero-title {
   margin: 0 auto;
-  width: 500px;
+  max-width: 500px;
   letter-spacing: 0.02em;
   font-size: var(--font-size-h1);
   line-height: 1.07;
@@ -188,6 +204,15 @@ body {
   flex-basis: calc((100% - 48px) / 4);
 }
 
+.skills-icon {
+  display: flex;
+  padding-top: 112px;
+  background-color: var(--color-alt);
+  background-image: url("");
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
 .skills-text {
   letter-spacing: 0.02em;
   line-height: 1.5;
@@ -213,6 +238,17 @@ body {
 .doing-list {
   display: flex;
   gap: 24px;
+}
+
+.doing-item {
+  border: 1px solid #e7e9fc;
+  background-image:
+    linear-gradient(
+      rgb(77 90 229 / 10%),
+      rgb(77 90 229 / 10%)
+    ),
+    url();
+  background-blend-mode: soft-light, normal;
 }
 
 /* =============== TEAM =============== */
@@ -267,6 +303,53 @@ body {
   line-height: 1.5;
   font-weight: var(--font-regular);
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.team-social-list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-social-link {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: var(--color-accent);
+  border-radius: 20px;
+}
+
+/* =============== CUSTOMERS =============== */
+
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.customers-title {
+  margin-bottom: 72px;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  font-size: var(--font-size-h2);
+  line-height: 1.11;
+  font-weight: var(--font-bold);
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.customers-item {
+  /* padding: 16px 32px; */
+  border: 1px solid var(--color-modal);
+  border-radius: 4px;
+}
+
+.customers-logo {
+  padding: 16px 32px;
 }
 
 /* =============== FOOTER =============== */
@@ -276,8 +359,13 @@ body {
   padding-bottom: 100px;
 }
 
+.footer .container {
+  display: flex;
+}
+
 .footer-content {
-  width: 264px;
+  max-width: 264px;
+  margin-right: 120px;
 }
 
 .logo-footer {
@@ -290,6 +378,27 @@ body {
   line-height: 1.5;
   font-weight: var(--font-regular);
   color: var(--color-text-light);
+}
+
+.footer-social-title {
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-weight: var(--font-medium);
+  color: var(--color-text-light);
+}
+
+.footer-social-list {
+  margin-top: 16px;
+  display: flex;
+  gap: 24px;
+}
+
+.footer-social-link {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(255 255 255 / 10%);
+  border-radius: 20px;
 }
 
 /***************** PORTFOLIO ******************/
@@ -334,16 +443,30 @@ body {
 }
 
 .work-item {
+  border: 1px solid var(--color-text-light);
   flex-basis: calc((100% - 48px) / 3);
+  box-shadow: 0 1px 6px rgb(46 47 66 / 8%);
+}
+
+.work-item:is(:hover, :focus) {
+  border: 0.5px solid #f4f4fd;
+  border: none;
+  box-shadow:
+    0 1px 6px rgb(46 47 66 / 8%),
+    0 1px 1px rgb(46 47 66 / 16%),
+    0 2px 1px rgb(46 47 66 / 8%);
 }
 
 .work-link img {
-  background: linear-gradient(0deg, rgb(77 90 229 / 10%), rgb(77 90 229 / 10%));
+  background:
+    linear-gradient(
+      0deg,
+      rgb(77 90 229 / 10%),
+      rgb(77 90 229 / 10%)
+    );
 }
 
 .work-content {
-  border: 1px solid var(--color-text-light);
-  border-top: none;
   padding: 32px 16px;
 }
 
