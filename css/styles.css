@@ -193,7 +193,7 @@ body {
 }
 
 .skills-item {
-  flex-basis: calc((100% - 48px) / 4);
+  flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
 .skills-block-icon {
@@ -232,6 +232,7 @@ body {
 }
 
 .doing-item {
+  flex-basis: calc((100% - 2 * 24px) / 3);
   border: 1px solid #e7e9fc;
   background:
     linear-gradient(
@@ -279,7 +280,7 @@ body {
 }
 
 .team-item {
-  flex-basis: calc((100% - 48px) / 4);
+  flex-basis: calc((100% - 3 * 24px) / 4);
   border-radius: 0 0 4px 4px;
   background: var(--color-light);
   box-shadow:
@@ -337,16 +338,23 @@ body {
   gap: 24px;
 }
 
-.customers-link {
+.customers-item {
+  flex-basis: calc((100% - 5 * 24px) / 6);
+}
+
+.customers-icon {
   display: block;
   border: 1px solid var(--color-modal);
   border-radius: 4px;
   background-color: var(--color-alt);
   height: 88px;
+  width: 168px;
   padding: 16px 32px;
+  fill: var(--color-modal);
 }
 
-.customers-link:is(:hover, :focus) {
+.customers-icon:is(:hover, :focus) {
+  fill: var(--color-active);
   border-color: var(--color-active);
 }
 
@@ -446,7 +454,7 @@ body {
 }
 
 .work-item {
-  flex-basis: calc((100% - 48px) / 3);
+  flex-basis: calc((100% - 2 * 24px) / 3);
   border: 1px solid var(--color-text-light);
   box-shadow: 0 1px 6px rgb(46 47 66 / 8%);
 }
