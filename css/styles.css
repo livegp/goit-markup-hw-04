@@ -346,6 +346,10 @@ body {
   padding: 16px 32px;
 }
 
+.customers-link:is(:hover, :focus) {
+  border-color: var(--color-active);
+}
+
 /* =============== FOOTER =============== */
 .footer {
   background: var(--color-dark);
