@@ -129,7 +129,6 @@ body {
 }
 
 .active {
-  border-bottom: 4px solid var(--color-active);
   color: var(--color-active);
 }
 
@@ -185,7 +184,7 @@ body {
 }
 
 .skills-subtitle {
-  margin-bottom: 8px;
+  margin: 8px 0;
   letter-spacing: 0.02em;
   font-size: var(--font-size-h3);
   line-height: 1.2;
@@ -197,32 +196,12 @@ body {
   flex-basis: calc((100% - 48px) / 4);
 }
 
-.skills-item::before {
-  content: "";
+.skills-block-icon {
   display: block;
   border-radius: 4px;
-  margin-bottom: 8px;
   background-color: var(--color-alt);
-  background-position: center;
-  background-size: 64px;
-  background-repeat: no-repeat;
   height: 112px;
-}
-
-.skills-item:nth-child(1)::before {
-  background-image: url("../sprite.svg#icon-antenna");
-}
-
-.skills-item:nth-child(2)::before {
-  background-image: url("../sprite.svg#icon-clock");
-}
-
-.skills-item:nth-child(3)::before {
-  background-image: url("../sprite.svg#icon-diagram");
-}
-
-.skills-item:nth-child(4)::before {
-  background-image: url("../sprite.svg#icon-astronaut");
+  padding: 24px 100px;
 }
 
 .skills-text {
@@ -258,8 +237,7 @@ body {
     linear-gradient(
       rgb(77 90 229 / 10%),
       rgb(77 90 229 / 10%)
-    ),
-    url();
+    );
   background-blend-mode: soft-light, normal;
 }
 
@@ -323,42 +301,17 @@ body {
   gap: 24px;
 }
 
-.team-social-item {
-  display: block;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  background-position: center;
-  background-size: 16px;
-  background-repeat: no-repeat;
-  height: 40px;
-  width: 40px;
-}
-
-.team-social-item:nth-child(1) {
-  background-image: url("../sprite.svg#icon-instagram");
-}
-
-.team-social-item:nth-child(2) {
-  background-image: url("../sprite.svg#icon-twitter");
-}
-
-.team-social-item:nth-child(3) {
-  background-image: url("../sprite.svg#icon-facebook");
-}
-
-.team-social-item:nth-child(4) {
-  background-image: url("../sprite.svg#icon-linkedin");
-}
-
-.team-social-item:is(:hover, :focus) {
-  background-color: var(--color-active);
-}
-
 .team-social-link {
   display: block;
   border-radius: 50%;
+  background-color: var(--color-accent);
   height: 40px;
   width: 40px;
+  padding: 12px;
+}
+
+.team-social-link:is(:hover, :focus) {
+  background-color: var(--color-active);
 }
 
 /* =============== CUSTOMERS =============== */
@@ -384,49 +337,14 @@ body {
   gap: 24px;
 }
 
-.customers-item {
-  content: "";
+.customers-link {
   display: block;
   border: 1px solid var(--color-modal);
   border-radius: 4px;
   background-color: var(--color-alt);
-  background-position: center;
-  background-size: 64px;
-  background-repeat: no-repeat;
-  height: 112px;
-}
-
-.customers-item:nth-child(1) {
-  background-image: url("../sprite.svg#icon-antenna");
-}
-
-.customers-item:nth-child(2) {
-  background-image: url("../sprite.svg#icon-clock");
-}
-
-.customers-item:nth-child(3) {
-  background-image: url("../sprite.svg#icon-diagram");
-}
-
-.customers-item:nth-child(4) {
-  background-image: url("../sprite.svg#icon-astronaut");
-}
-
-.customers-item:nth-child(5) {
-  background-image: url("../sprite.svg#icon-astronaut");
-}
-
-.customers-item:nth-child(6) {
-  background-image: url("../sprite.svg#icon-astronaut");
-}
-
-.customers-item:is(:hover, :focus) {
-  border: 1px solid var(--color-active);
-}
-
-/* .customers-logo {
+  height: 88px;
   padding: 16px 32px;
-} */
+}
 
 /* =============== FOOTER =============== */
 .footer {
@@ -469,42 +387,17 @@ body {
   gap: 24px;
 }
 
-.footer-social-item {
-  display: block;
-  border-radius: 50%;
-  background-color: rgb(255 255 255 / 10%);
-  background-position: center;
-  background-size: 24px;
-  background-repeat: no-repeat;
-  height: 40px;
-  width: 40px;
-}
-
-.footer-social-item:nth-child(1) {
-  background-image: url("../sprite.svg#icon-instagram");
-}
-
-.footer-social-item:nth-child(2) {
-  background-image: url("../sprite.svg#icon-twitter");
-}
-
-.footer-social-item:nth-child(3) {
-  background-image: url("../sprite.svg#icon-facebook");
-}
-
-.footer-social-item:nth-child(4) {
-  background-image: url("../sprite.svg#icon-linkedin");
-}
-
-.footer-social-item:is(:hover, :focus) {
-  background-color: var(--color-footer-active);
-}
-
 .footer-social-link {
   display: block;
   border-radius: 50%;
+  background-color: rgb(255 255 255 / 10%);
   height: 40px;
   width: 40px;
+  padding: 8px;
+}
+
+.footer-social-link:is(:hover, :focus) {
+  background-color: var(--color-footer-active);
 }
 
 /***************** PORTFOLIO ******************/
