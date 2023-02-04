@@ -482,17 +482,9 @@ body {
   color: var(--color-dark);
 }
 
-.work-subtitle:is(:hover, :focus) {
-  color: var(--color-active);
-}
-
 .work-text {
   letter-spacing: 0.02em;
   line-height: 1.5;
   font-weight: var(--font-regular);
   color: var(--color-text-dark);
-}
-
-.work-text:is(:hover, :focus) {
-  color: var(--color-active);
 }
