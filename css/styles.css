@@ -133,13 +133,14 @@ body {
 }
 
 /* =============== HERO =============== */
+
 .hero {
   background:
     linear-gradient(
       var(--color-bgd-hero),
       var(--color-bgd-hero)
-    ),
-    url("../images/home/hero/people-office.jpg") 50% 0/cover var(--color-dark);
+    ) no-repeat center/1440px auto,
+    url("../images/home/hero/people-office.jpg") no-repeat center/1440px auto var(--color-dark);
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -454,14 +455,17 @@ body {
 }
 
 .work-item {
+  display: flex;
   flex-basis: calc((100% - 2 * 24px) / 3);
+}
+
+.work-link {
   border: 1px solid var(--color-text-light);
   box-shadow: 0 1px 6px rgb(46 47 66 / 8%);
 }
 
-.work-item:is(:hover, :focus) {
-  border: 0.5px solid #f4f4fd;
-  border: none;
+.work-link:is(:hover, :focus) {
+  border: 1px solid var(--color-alt);
   box-shadow:
     0 1px 6px rgb(46 47 66 / 8%),
     0 1px 1px rgb(46 47 66 / 16%),
@@ -475,6 +479,7 @@ body {
       rgb(77 90 229 / 10%),
       rgb(77 90 229 / 10%)
     );
+  background-blend-mode: soft-light, normal;
 }
 
 .work-content {
