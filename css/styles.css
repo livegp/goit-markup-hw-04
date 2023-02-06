@@ -72,6 +72,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -103,12 +104,23 @@ body {
   line-height: 1.5;
   font-weight: var(--font-medium);
   color: var(--color-dark);
+  position: relative;
 }
 
 .active,
 .nav-link:is(:hover, :focus) {
   color: var(--color-active);
 }
+
+/* .active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-active);
+  position: relative;
+  bottom: -23px;
+} */
 
 .address {
   display: flex;
@@ -140,7 +152,8 @@ body {
       var(--color-bgd-hero),
       var(--color-bgd-hero)
     ) no-repeat center/1440px auto,
-    url("../images/home/hero/people-office.jpg") no-repeat center/1440px auto var(--color-dark);
+    url("../images/home/hero/people-office.jpg")
+    no-repeat center/1440px auto var(--color-dark);
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -181,16 +194,8 @@ body {
 
 .skills-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
-}
-
-.skills-subtitle {
-  margin: 8px 0;
-  letter-spacing: 0.02em;
-  font-size: var(--font-size-h3);
-  line-height: 1.2;
-  font-weight: var(--font-medium);
-  color: var(--color-dark);
 }
 
 .skills-item {
@@ -203,6 +208,15 @@ body {
   border-radius: 4px;
   background-color: var(--color-alt);
   height: 112px;
+}
+
+.skills-subtitle {
+  margin: 8px 0;
+  letter-spacing: 0.02em;
+  font-size: var(--font-size-h3);
+  line-height: 1.2;
+  font-weight: var(--font-medium);
+  color: var(--color-dark);
 }
 
 .skills-text {
@@ -229,6 +243,7 @@ body {
 
 .doing-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -263,6 +278,7 @@ body {
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -336,6 +352,7 @@ body {
 
 .customers-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -471,6 +488,33 @@ body {
     0 1px 1px rgb(46 47 66 / 16%),
     0 2px 1px rgb(46 47 66 / 8%);
 }
+
+/* .work-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-overlay {
+  display: block;
+  padding: 40px 32px;
+  position: absolute;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: var(--color-alt);
+  background-color: var(--color-accent);
+  font-weight: var(--font-regular);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform 250ms ease;
+}
+
+.work-image:hover .work-overlay {
+  transform: translateX(0);
+} */
 
 .work-link img {
   background:
